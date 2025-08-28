@@ -1,14 +1,15 @@
 import Phaser from 'phaser'
 import { BootScene } from './scenes/BootScene'
 import { MainMenuScene } from './scenes/MainMenuScene'
-import { GameScene } from './scenes/GameScene'
+import { GameSceneRefactored as GameScene } from './scenes/GameSceneRefactored'
 import { SecondScene } from './scenes/SecondScene'
 import { FPSScene } from './scenes/FPSScene'
+import { GAME_CONFIG } from './constants/GameConfig'
 
 const config: Phaser.Types.Core.GameConfig = {
   type: Phaser.AUTO,
   parent: 'game-container',
-  backgroundColor: '#92C16D',
+  backgroundColor: GAME_CONFIG.COLORS.BACKGROUND,
   scale: {
     mode: Phaser.Scale.RESIZE,
     width: '100%',
