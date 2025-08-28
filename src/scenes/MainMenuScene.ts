@@ -13,7 +13,7 @@ export class MainMenuScene extends Phaser.Scene {
     const centerX = this.scale.width / 2
     const centerY = this.scale.height / 2
 
-    const title = this.add.text(centerX, centerY - 100, 'Detective Biscuit', {
+    this.add.text(centerX, centerY - 100, 'Detective Biscuit', {
       fontSize: '32px',
       color: '#353535',
       fontFamily: 'serif',

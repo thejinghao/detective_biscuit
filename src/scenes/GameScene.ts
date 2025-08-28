@@ -306,7 +306,7 @@ export class GameScene extends Phaser.Scene {
     
     const uiY = 20
     const barWidth = 200
-    const barHeight = 20
+    // const barHeight = 20
     
     this.titleText = this.add.text(20, uiY, 'Detective Biscuit', {
       fontSize: '20px',
@@ -383,7 +383,7 @@ export class GameScene extends Phaser.Scene {
   updateUI() {
     const uiY = 20
     const barWidth = 200
-    const barHeight = 20
+    // const barHeight = 20
     
     this.levelText.setText(`Level: ${this.playerStats.level}`)
     
@@ -393,15 +393,15 @@ export class GameScene extends Phaser.Scene {
 
     this.healthBar.clear()
     this.healthBar.fillStyle(0x3E372E)
-    this.healthBar.fillRect(70, uiY + 60, barWidth, barHeight)
+    this.healthBar.fillRect(70, uiY + 60, barWidth, 20)
     this.healthBar.fillStyle(0xF24E5C)
-    this.healthBar.fillRect(70, uiY + 60, barWidth * this.playerStats.getHealthPercentage(), barHeight)
+    this.healthBar.fillRect(70, uiY + 60, barWidth * this.playerStats.getHealthPercentage(), 20)
 
     this.manaBar.clear()
     this.manaBar.fillStyle(0x3E372E)
-    this.manaBar.fillRect(70, uiY + 90, barWidth, barHeight)
+    this.manaBar.fillRect(70, uiY + 90, barWidth, 20)
     this.manaBar.fillStyle(0x6A9F4D)
-    this.manaBar.fillRect(70, uiY + 90, barWidth * this.playerStats.getManaPercentage(), barHeight)
+    this.manaBar.fillRect(70, uiY + 90, barWidth * this.playerStats.getManaPercentage(), 20)
   }
 
   update() {

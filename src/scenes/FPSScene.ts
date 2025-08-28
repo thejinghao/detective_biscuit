@@ -7,7 +7,7 @@ export class FPSScene extends Phaser.Scene {
   private score: number = 0
   private scoreText!: Phaser.GameObjects.Text
   private background!: Phaser.GameObjects.Image
-  private returnText!: Phaser.GameObjects.Text
+  // private returnText!: Phaser.GameObjects.Text
   private previousScene: string = 'GameScene'
 
   constructor() {
@@ -37,7 +37,7 @@ export class FPSScene extends Phaser.Scene {
       fontStyle: 'bold'
     }).setDepth(99)
 
-    this.returnText = this.add.text(20, 60, 'Press ESC to return', {
+    this.add.text(20, 60, 'Press ESC to return', {
       fontSize: '18px',
       color: '#CCCCCC'
     }).setDepth(99)
@@ -67,8 +67,8 @@ export class FPSScene extends Phaser.Scene {
       loop: true
     })
 
-    this.physics.world.on('worldbounds', (event: any, body: Phaser.Physics.Arcade.Body) => {
-      if (body.gameObject && body.gameObject.texture && body.gameObject.texture.key === 'fps-bullet') {
+    this.physics.world.on('worldbounds', (_event: any, body: Phaser.Physics.Arcade.Body) => {
+      if (body.gameObject && (body.gameObject as any).texture && (body.gameObject as any).texture.key === 'fps-bullet') {
         body.gameObject.destroy()
       }
     })

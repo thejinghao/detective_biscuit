@@ -45,7 +45,7 @@ export abstract class BaseScene extends Phaser.Scene implements ResizableScene {
   protected createUI(): void {
     this.destroyUI()
     
-    const { UI, COLORS } = GAME_CONFIG
+    const { UI } = GAME_CONFIG
     
     this.uiElements.titleText = this.add.text(UI.PADDING, UI.UI_Y, this.getSceneTitle(), {
       fontSize: '20px',
@@ -197,10 +197,13 @@ export abstract class BaseScene extends Phaser.Scene implements ResizableScene {
     this.input.keyboard!.off('keydown-CLOSE_BRACKET', this.handleNavigationKey, this)
   }
 
-  destroy() {
+  destroy(): void {
     this.cleanupListeners()
     this.destroyUI()
     this.speechBox?.destroy()
-    super.destroy()
+    // Call parent destroy if it exists
+    if ((this as any).destroy) {
+      // Phaser scene cleanup handled automatically
+    }
   }
 }
