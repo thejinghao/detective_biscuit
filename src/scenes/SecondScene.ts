@@ -11,7 +11,7 @@ export class SecondScene extends Phaser.Scene {
   private wasdKeys!: any
   private playerStats!: PlayerStats
   private speechBox!: SpeechBox
-  private facingDirection: string = 'up'
+  // private facingDirection: string = 'up'
   private backgroundImage!: Phaser.GameObjects.Image
   
   private healthBar!: Phaser.GameObjects.Graphics
@@ -86,7 +86,7 @@ export class SecondScene extends Phaser.Scene {
     
     const uiY = 20
     const barWidth = 200
-    const barHeight = 20
+    // const barHeight = 20
     
     this.titleText = this.add.text(20, uiY, 'Detective Biscuit - Explore Room', {
       fontSize: '20px',
@@ -163,7 +163,7 @@ export class SecondScene extends Phaser.Scene {
   updateUI() {
     const uiY = 20
     const barWidth = 200
-    const barHeight = 20
+    // const barHeight = 20
     
     this.levelText.setText(`Level: ${this.playerStats.level}`)
     
@@ -173,15 +173,15 @@ export class SecondScene extends Phaser.Scene {
 
     this.healthBar.clear()
     this.healthBar.fillStyle(0x3E372E)
-    this.healthBar.fillRect(70, uiY + 60, barWidth, barHeight)
+    this.healthBar.fillRect(70, uiY + 60, barWidth, 20)
     this.healthBar.fillStyle(0xF24E5C)
-    this.healthBar.fillRect(70, uiY + 60, barWidth * this.playerStats.getHealthPercentage(), barHeight)
+    this.healthBar.fillRect(70, uiY + 60, barWidth * this.playerStats.getHealthPercentage(), 20)
 
     this.manaBar.clear()
     this.manaBar.fillStyle(0x3E372E)
-    this.manaBar.fillRect(70, uiY + 90, barWidth, barHeight)
+    this.manaBar.fillRect(70, uiY + 90, barWidth, 20)
     this.manaBar.fillStyle(0x6A9F4D)
-    this.manaBar.fillRect(70, uiY + 90, barWidth * this.playerStats.getManaPercentage(), barHeight)
+    this.manaBar.fillRect(70, uiY + 90, barWidth * this.playerStats.getManaPercentage(), 20)
   }
 
   update() {
@@ -193,19 +193,19 @@ export class SecondScene extends Phaser.Scene {
 
     if (this.wasdKeys.A.isDown) {
       newX = this.gridX - 1
-      this.facingDirection = 'left'
+      // this.facingDirection = 'left'
       moved = true
     } else if (this.wasdKeys.D.isDown) {
       newX = this.gridX + 1
-      this.facingDirection = 'right'
+      // this.facingDirection = 'right'
       moved = true
     } else if (this.wasdKeys.W.isDown) {
       newY = this.gridY - 1
-      this.facingDirection = 'up'
+      // this.facingDirection = 'up'
       moved = true
     } else if (this.wasdKeys.S.isDown) {
       newY = this.gridY + 1
-      this.facingDirection = 'down'
+      // this.facingDirection = 'down'
       moved = true
     }
 

@@ -63,7 +63,7 @@ export class WorldSystem {
     for (let x = 0; x < this.worldDimensions.width; x++) {
       this.tiles[x] = []
       for (let y = 0; y < this.worldDimensions.height; y++) {
-        let tileType = ASSET_KEYS.TILES.PAWGRASS
+        let tileType: string = ASSET_KEYS.TILES.PAWGRASS
         
         // Border tiles
         if (x === 0 || x === this.worldDimensions.width - 1 || 
