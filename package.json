@@ -1,0 +1,31 @@
+{
+  "name": "detective-biscuit",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thejinghao/detective_biscuit.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/thejinghao/detective_biscuit/issues"
+  },
+  "homepage": "https://github.com/thejinghao/detective_biscuit#readme",
+  "dependencies": {
+    "phaser": "^3.80.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.15",
+    "typescript": "^5.5.4",
+    "vite": "^5.4.0"
+  }
+}
