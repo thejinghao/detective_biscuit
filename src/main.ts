@@ -2,7 +2,7 @@ import Phaser from 'phaser'
 import { BootScene } from './scenes/BootScene'
 import { MainMenuScene } from './scenes/MainMenuScene'
 import { GameSceneRefactored as GameScene } from './scenes/GameSceneRefactored'
-import { SecondScene } from './scenes/SecondScene'
+import { SecondSceneRefactored as SecondScene } from './scenes/SecondSceneRefactored'
 import { FPSScene } from './scenes/FPSScene'
 import { GAME_CONFIG } from './constants/GameConfig'
 
